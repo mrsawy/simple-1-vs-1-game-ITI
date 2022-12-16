@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2b3a55;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.start{
+    margin-bottom: 60px;
+    color: #c4d0e4;
+    animation: start 1s ;
+}
+@keyframes start {
+    0%{
+        transform: translatey(-100px) ;
+     } 
+        100%{
+        transform: translatey(0) ;
+     } 
+}
+.start strong {
+    text-decoration: underline;
+    cursor: pointer;
+    position: relative;
+}
+em :hover{
+    margin-bottom: 20px;
+    transform: translatey(-100px) ;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.container * {
+  margin: 0 12px;
+}
+.first_player,
+.second_player {
+  border-radius: 18px;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 18px;
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.first_player {
+  background-color: #e8c4c4;
+  animation: first_player_movement 1s ease-in-out ;
+}
+.second_player {
+  background-color: #ce7777;
+  animation: second_player_movement 1s ease-in-out ;
+
+}
+
+@keyframes first_player_movement {
+    0%{
+        transform: translatey(100px) ;
+    }
+    50%{
+        transform: translatey(-20px) ;
+    }
+    100%{
+        transform: translatey(0) ;
+    }
+}@keyframes second_player_movement {
+    0%{
+        transform: translatey(100px) ;
+    }
+    50%{
+        transform: translatey(-50px) ;
+    }
+    100%{
+        transform: translatey(0) ;
+    }
+}
+
+.first_logout,
+.second_logout {
+    border: 0;
+
+  border-radius: 20px;
+  height: 40px;
+  width: 70px;
+  background-color: #c9d1e1;
+  cursor: pointer;
+
+}
+.first_logout:active,
+.second_logout:active {
+box-shadow: 0px 4px 8px #68769c;
+transform: scale(0.98);}
+.first_logout{
+    animation: first_logout_movement 1s ease-in-out ;
+}
+@keyframes first_logout_movement {
+    0%{
+        transform: translatex(-100px) ;
+    }
+    50%{
+        transform: translatey(-50px) ;
+    }
+    100%{
+        transform: translatey(0) ;
+    }
+}.second_logout{
+    animation: second_logout_movement 1s ease-in-out ;
+}
+@keyframes second_logout_movement {
+    0%{
+        transform: translatex(100px) ;
+    }
+    50%{
+        transform: translatey(-50px) ;
+    }
+    100%{
+        transform: translatey(0) ;
+    }
+}
+
+.first_player h1,
+.second_player h1 {
+  margin-bottom: 40px;
+}
+.first_player button,
+.second_player button {
+    cursor: pointer;
+  border-radius: 50px;
+  border: 0;
+  width: 80px;
+  height: 80px;
+  transition: all 0.3s;
+
+}
+
+.first_player button:active,
+.second_player button:active {
+    box-shadow: 0px 4px 8px #68769c;
+    transform: scale(0.98);
+  }
+.first_player button:hover,
+.second_player button:hover {
+    box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
+    transform: scale(1.05);
+ }
+
+ .counter{
+    font-weight: bolder;
+    font-size: 20px;
+ }
+ h1{
+    transition: 1s;
+ }
+
+ .warning{
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+ border: 5px solid red; 
+ animation: danger 10s ;
+ }
+@keyframes danger {
+    0%{
+        border: 3.1px solid red; 
+
+    }
+    10%{
+        border: 5px solid white; 
+
+    } 
+    15%{        border: 5px solid red; 
+    }
+    20%{        border: 5px solid white; 
+    }25%{        border: 4.1px solid red; 
+    }30%{        border: 5px solid white; 
+    }40%{        border: 4.1px solid red; 
+    }45%{        border: 5px solid white; 
+    }50%{        border: 4.1px solid red; 
+    }55%{        border: 5px solid white; 
+    }60%{        border: 4.1px solid red; 
+    }65%{        border: 5px solid white; 
+    }70%{
+        border: 4.1px solid red; 
+    }86%{
+        border: 5px solid white;
+    }94%{
+        border: 4.1px solid red; 
+    }100%{
+        border: 5px solid white;
+    }
+}
+
+ /* cubic-bezier(n,n,n,n) */
